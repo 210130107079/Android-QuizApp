@@ -20,30 +20,41 @@ public class QuestionsActivity extends AppCompatActivity {
     RadioButton rb1,rb2,rb3,rb4;
 
     String questions[] = {
-                            "Which method can be defined only once in a program?",
-                            "Which of these is not a bitwise operator?",
-                            "Which keyword is used by method to refer to the object that invoked it?",
-                            "Which of these keywords is used to define interfaces in Java?",
-                            "Which of these access specifiers can be used for an interface?",
-                            "Which of the following is correct way of importing an entire package ‘pkg’?",
-                            "What is the return type of Constructors?",
-                            "Which of the following package stores all the standard java classes?",
-                            "Which of these method of class String is used to compare two String objects for their equality?",
-                            "An expression involving byte, int, & literal numbers is promoted to which of these?"
-                         };
-    String answers[] = {"main method","<=","this","interface","public","import pkg.*","None of the mentioned","java","equals()","int"};
+            "What is the purpose of the <html> tag in HTML?",
+            "Which HTML tag is used to define a hyperlink?",
+            "What is the difference between the <br> and <p> tags in HTML?",
+            "How do you define a CSS style in HTML?",
+            "What is the purpose of the <head> tag in HTML?",
+            "Which HTML tag is used to define a list?",
+            "What is the difference between the <strong> and <b> tags in HTML?",
+            "How do you add an image to an HTML page?",
+            "What is the purpose of the <body> tag in HTML?",
+            "Which HTML tag is used to define a table?"
+    };
+    String answers[] = {
+            "To define the structure of an HTML document",
+            "<a>",
+            "<br> is used for a line break, <p> is used for a paragraph",
+            "Using the <style> tag", "Using the <script> tag",
+            "To define the title of an HTML document",
+            "<ul>",
+            "<strong> is used for bold text, <b> is used for italic text",
+            "Using the <img> tag",
+            "To define the content of an HTML document",
+            "<table>",
+    };
     String opt[] = {
-                    "finalize method","main method","static method","private method",
-                    "&","&=","|=","<=",
-                    "import","this","catch","abstract",
-                    "Interface","interface","intf","Intf",
-                    "public","protected","private","All of the mentioned",
-                    "Import pkg.","import pkg.*","Import pkg.*","import pkg.",
-                    "int","float","void","None of the mentioned",
-                    "lang","java","util","java.packages",
-                    "equals()","Equals()","isequal()","Isequal()",
-                     "int","long","byte","float"
-                   };
+            "To define the structure of an HTML document", "To add styles to an HTML document", "To add scripts to an HTML document", "To add images to an HTML document",
+            "<a>", "<link>", "<img>", "<button>",
+            "<br> is used for a line break, <p> is used for a paragraph", "<br> is used for a paragraph, <p> is used for a line break", "<br> is used for a heading, <p> is used for a paragraph", "<br> is used for a paragraph, <p> is used for a heading",
+            "Using the <style> tag", "Using the <script> tag", "Using the <link> tag", "Using the <img> tag",
+            "To define the title of an HTML document", "To define the styles of an HTML document", "To define the scripts of an HTML document", "To define the structure of an HTML document",
+            "<ul>", "<ol>", "<li>", "<table>",
+            "<strong> is used for bold text, <b> is used for italic text", "<strong> is used for italic text, <b> is used for bold text", "<strong> is used for underlined text, <b> is used for bold text", "<strong> is used for bold text, <b> is used for underlined text",
+            "Using the <img> tag", "Using the <picture> tag", "Using the <figure> tag", "Using the <figcaption> tag",
+            "To define the content of an HTML document", "To define the styles of an HTML document", "To define the scripts of an HTML document", "To define the structure of an HTML document",
+            "<table>", "<tr>", "<td>", "<th>",
+    };
     int flag=0;
     public static int marks=0,correct=0,wrong=0;
     @Override
@@ -59,7 +70,7 @@ public class QuestionsActivity extends AppCompatActivity {
         if (name.trim().equals(""))
             textView.setText("Hello User");
         else
-        textView.setText("Hello " + name);
+            textView.setText("Hello " + name);
 
         submitbutton=(Button)findViewById(R.id.button3);
         quitbutton=(Button)findViewById(R.id.buttonquit);

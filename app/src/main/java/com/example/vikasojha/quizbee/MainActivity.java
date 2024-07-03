@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button startbutton=(Button)findViewById(R.id.button);
-        Button aboutbutton=(Button)findViewById(R.id.button2);
         final EditText nametext=(EditText)findViewById(R.id.editName);
 
                 startbutton.setOnClickListener(new View.OnClickListener() {
@@ -29,13 +28,5 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
                 });
-
-                aboutbutton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                    Intent intent=new Intent(getApplicationContext(),DeveloperActivity.class);
-                    startActivity(intent);
-            }
-        });
     }
 }
